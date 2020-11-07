@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export const AuthForm = () => {
+export const AuthForm = ({register}) => {
   const [form, setForm] = useState({
     email: "",
     password: "",
@@ -25,7 +25,7 @@ export const AuthForm = () => {
         onChange={changeHandler}
       />
       <button>Sign in</button>
-      <button>Sign up</button>
+      <button onClick={()=>register(form)}>Sign up</button>
     </div>
   );
 };
