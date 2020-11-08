@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export const AuthForm = ({register}) => {
+export const AuthForm = ({register, login}) => {
   const [form, setForm] = useState({
     email: "",
     password: "",
@@ -20,11 +20,11 @@ export const AuthForm = ({register}) => {
       />
       <input
         placeholder="put pass"
-        type="text"
+        type="password"
         name="password"
         onChange={changeHandler}
       />
-      <button>Sign in</button>
+      <button onClick={()=>login(form)}>Sign in</button>
       <button onClick={()=>register(form)}>Sign up</button>
     </div>
   );

@@ -14,6 +14,7 @@ router.post(
     check("password", "Min length passord 6 symbols").isLength({ min: 6 }),
   ],
   async (req, res) => {
+    console.log(req.body)
     try {
       const errors = validationResult(req);
       if (!errors.isEmpty()) {
