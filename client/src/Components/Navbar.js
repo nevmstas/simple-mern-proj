@@ -10,6 +10,7 @@ export const Navbar = () => {
     auth.logout();
     history.push("/");
   };
+  
   return (
     <nav>
       <div>
