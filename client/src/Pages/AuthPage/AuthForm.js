@@ -16,12 +16,14 @@ export const AuthForm = ({register, login}) => {
         placeholder="put email"
         type="text"
         name="email"
+        value={form.email}
         onChange={changeHandler}
       />
       <input
         placeholder="put pass"
         type="password"
         name="password"
+        value={form.password}
         onChange={changeHandler}
       />
       <button onClick={()=>login(form)}>Sign in</button>
